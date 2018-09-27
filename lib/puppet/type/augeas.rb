@@ -186,7 +186,7 @@ Puppet::Type.newtype(:augeas) do
 
     # Make output a bit prettier
     def change_to_s(_currentvalue, _newvalue)
-      _('executed successfully')
+      _('Execution successful')
     end
 
     # if the onlyif resource is provided, then the value is parsed.
