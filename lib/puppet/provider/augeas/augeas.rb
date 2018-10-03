@@ -498,7 +498,7 @@ Puppet::Type.type(:augeas).provide(:augeas) do
   def do_execute_changes
     commands = parse_commands(resource[:changes])
     commands.each do |cmd_array|
-      fail(_('invalid command %{cmd}') % { value0: cmd_array.join[' '] }) if cmd_array.length < 2
+      fail(_('Invalid command %{cmd}') % { value0: cmd_array.join[' '] }) if cmd_array.length < 2
       command = cmd_array[0]
       cmd_array.shift
       begin
